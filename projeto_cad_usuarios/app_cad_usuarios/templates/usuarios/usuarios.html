@@ -1,0 +1,27 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
+<div class="container">
+    <h1 style="margin-top: 30px;">Estudantes Cadastrados</h1>
+    <table style="background-color: rgb(113, 113, 243); color: rgb(0, 0, 0); font-weight: bold;" class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>NOME</th>
+            <th>IDADE</th>
+            <th>CURSO</th>
+            <th>MÓDULO</th>
+
+        </tr>
+        {%  for usuario in usuarios %}
+        <tr>
+            <td>{{usuario.id_usuario}}</td>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.idade}}</td>
+            <td>{{usuario.curso}}</td>
+            <td>{{usuario.modulo}}</td>
+
+        </tr>
+        {%  endfor %}
+    </table>
+</div>
+{% endblock %}
